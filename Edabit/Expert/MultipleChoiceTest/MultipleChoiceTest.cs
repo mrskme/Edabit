@@ -42,8 +42,12 @@ namespace Edabit.Expert.MultipleChoiceTest
             student3.TakeTest(paper3, new[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B" });
             student3.TakeTest(paper4, new[] { "1A", "2C", "3A", "4C", "5D", "6C", "7B", "8C", "9D", "10A", "11A" });
 
+
+            Console.WriteLine("Student 1:");
             student1.WriteTestsTaken();
+            Console.WriteLine("\nStudent 2:");
             student2.WriteTestsTaken();
+            Console.WriteLine("\nStudent 3:");
             student3.WriteTestsTaken();
         }
     }
@@ -77,7 +81,6 @@ namespace Edabit.Expert.MultipleChoiceTest
 
             var isPassString = percentageCorrect >= percentageToPass ? "Passed!" : "Failed!";
             var resultString = $"{paper.Subject}: {isPassString} ({percentageCorrect}%)";
-
 
             if (TestsTaken[0] == "No tests taken") TestsTaken.Clear();
             TestsTaken.Add(resultString);
